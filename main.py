@@ -17,7 +17,7 @@ def speak(text):
     engine.runAndWait()
 
 # Initialize Gemini
-genai.configure(api_key="AIzaSyC6scxscZwuTXCHOpIP_49zcNa5__yFAmE")
+genai.configure(api_key="API KEY")
 model = genai.GenerativeModel(model_name="gemini-1.5-flash")
 
 # IP Webcam URL (replace with your phone's IP)
