@@ -22,7 +22,7 @@ model = genai.GenerativeModel(model_name="gemini-1.5-flash")
 
 # IP Webcam URL (replace with your phone's IP)
 url = 'http://10.134.93.78:8080/video'  # Update IP
-cap = cv2.VideoCapture(url)
+cap = cv2.VideoCapture(0)
 
 status = "Press 's' or say 'scan' to scan surroundings..."
 scan_triggered = False  # Flag for voice activation
@@ -31,7 +31,7 @@ def process_frame(frame):
     rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
     pil_image = Image.fromarray(rgb_frame)
     response = model.generate_content([
-        "Describe this scene briefly for a blind user. If there are any signs like STOP or traffic lights, mention them clearly.",
+        "Provide a short, clear, and concise description of this scene (1–2 sentences) for a blind person. Focus only on key visual elements or signs like STOP signs, vehicles, people, or traffic lights.",
         pil_image
     ])
     description = response.text.strip()
