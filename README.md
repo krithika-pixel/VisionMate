@@ -33,6 +33,9 @@ This is the early development and ideation phase. The repository will include pr
 
 > 🚧 **Work in Progress**: Only starter files and prototypes are included at this stage.
 
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/kaushav07/VisionMate.git
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/kaushav07/VisionMate.git
+cd VisionMate
+pip install -r requirements.txt
