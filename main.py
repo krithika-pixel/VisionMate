@@ -22,7 +22,7 @@ model = genai.GenerativeModel(model_name="gemini-1.5-flash")
 
 # IP Webcam URL (replace with your phone's IP)
 url = 'http://10.134.93.78:8080/video'  # Update IP
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(url)
 
 status = "Press 's' or say 'scan' to scan surroundings..."
 scan_triggered = False  # Flag for voice activation
